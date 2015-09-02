@@ -5,10 +5,12 @@
 
 return array(
 	'default' => array(
+		'type' => 'mysqli',
 		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=fuel_prod',
-			'username'   => 'fuel_app',
-			'password'   => 'super_secret_password',
+			'hostname'   => 'mysql1.webcrow-php.netowl.jp',
+			'database'   => 'niino_bbs',
+			'username'   => 'niino_bbs',
+			'password'   => 'niinoeiichi',
 		),
 	),
 );

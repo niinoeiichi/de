@@ -9,7 +9,7 @@
  * @copyright  2010 - 2015 Fuel Development Team
  * @link       http://fuelphp.com
  */
-
+ini_set('default_charset', 'UTF-8');
 return array(
 
 	/**
@@ -39,7 +39,7 @@ return array(
 	/**
 	 * index_file - The name of the main bootstrap file.
 	 *
-	 * Set this to 'index.php if you don't use URL rewriting
+	 * Set this to 'detail.php if you don't use URL rewriting
 	 */
 	// 'index_file' => false,
 
@@ -77,14 +77,14 @@ return array(
 	/**
 	 * Localization & internationalization settings
 	 */
-	// 'language'           => 'en', // Default language
+	 'language'           => 'ja', // Default language
 	// 'language_fallback'  => 'en', // Fallback language when file isn't available for default language
 	// 'locale'             => 'en_US', // PHP set_locale() setting, null to not set
 
 	/**
 	 * Internal string encoding charset
 	 */
-	// 'encoding'  => 'UTF-8',
+	 'encoding'  => 'UTF-8',
 
 	/**
 	 * DateTime settings
@@ -94,7 +94,7 @@ return array(
 	 */
 	// 'server_gmt_offset'  => 0,
 	// 'default_timezone'   => null,
-
+	'default_timezone' => 'Asia/Tokyo',
 	/**
 	 * Logging Threshold.  Can be set to any of the following:
 	 *
@@ -105,7 +105,7 @@ return array(
 	 * Fuel::L_INFO
 	 * Fuel::L_ALL
 	 */
-	// 'log_threshold'    => Fuel::L_WARNING,
+	 'log_threshold'    => Fuel::L_ALL,
 	// 'log_path'         => APPPATH.'logs/',
 	// 'log_date_format'  => 'Y-m-d H:i:s',
 
@@ -256,7 +256,7 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
+	 'always_load'  => array(
 
 		/**
 		 * These packages are loaded on Fuel's startup.
@@ -269,9 +269,9 @@ return array(
 		 *     array('auth'	=> PKGPATH.'auth/')
 		 * );
 		 */
-		// 'packages'  => array(
-		// 	//'orm',
-		// ),
+		 'packages'  => array(
+		 	'auth',
+		 ),
 
 		/**
 		 * These modules are always loaded on Fuel's startup. You can specify them
@@ -307,6 +307,6 @@ return array(
 		 * If you don't want the lang in a group use null as groupname.
 		 */
 		// 'language'  => array(),
-	// ),
+	 ),
 
 );

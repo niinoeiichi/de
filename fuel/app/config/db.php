@@ -6,5 +6,13 @@
  */
 
 return array(
-
+    'default' => array(
+        'type' => 'mysqli',
+        'connection'  => array(
+            'hostname'   => 'localhost',
+            'database'   => 'niino_bbs',
+            'username'   => 'root',
+            'password'   => 'niinoeiichi',
+        ),
+    ),
 );

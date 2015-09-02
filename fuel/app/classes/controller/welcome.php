@@ -19,7 +19,7 @@
  * @package  app
  * @extends  Controller
  */
-class Controller_Welcome extends Controller
+class Controller_Welcome extends Controller_Tbase
 {
 	/**
 	 * The basic welcome message
@@ -29,19 +29,8 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
-		return Response::forge(View::forge('welcome/index'));
-	}
-
-	/**
-	 * A typical "Hello, Bob!" type example.  This uses a Presenter to
-	 * show how to use them.
-	 *
-	 * @access  public
-	 * @return  Response
-	 */
-	public function action_hello()
-	{
-		return Response::forge(Presenter::forge('welcome/hello'));
+		$this->template->content = Response::forge(View::forge('welcome/index'));
+		$this->template->title = "welcome";
 	}
 
 	/**
