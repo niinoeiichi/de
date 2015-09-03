@@ -22,6 +22,7 @@ class Controller_Top extends Controller_Tbase
             $data['entities'][] = $tmp;
         }
         $this->template->content = View::forge('top/index',$data);
+        $this->template->title='マイページ';
 
     }
 }
